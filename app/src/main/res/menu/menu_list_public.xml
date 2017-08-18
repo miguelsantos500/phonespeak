@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:search_menu="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="pt.ipleiria.estg.dei.phonespeak.ListChannelsActivity">
+
+    <item android:title="Search"
+        android:icon="@drawable/ic_search"
+        search_menu:showAsAction="always"
+        android:id="@+id/btnMenuSearch" />
+    <group >
+        <item android:title="@string/list_own_label"
+            android:id="@+id/btnMenuOwn" />
+        <item android:title="@string/list_fav_label"
+            android:id="@+id/btnMenuFav" />
+        <item android:title="@string/list_public_label"
+            android:id="@+id/btnMenuPublic" />
+    </group>
+</menu>

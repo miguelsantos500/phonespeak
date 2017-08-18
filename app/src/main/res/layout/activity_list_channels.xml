@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_list_public_channels"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="pt.ipleiria.estg.dei.phonespeak.ListChannelsActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:id="@+id/layoutSearch">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0">
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/searchBar"
+                android:layout_weight="1">
+
+            </SearchView>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_action_show_filters"
+                android:id="@+id/btnToggleFilters"
+                android:layout_weight="0"
+                android:background = "@null"
+                android:onClick="onClickToggleFilters" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:id="@+id/layoutFilters">
+
+            <CheckBox
+                android:text="@string/search_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkBoxId"
+                android:layout_weight="1"
+                android:onClick="onClickChk"
+                android:checked="true" />
+
+            <CheckBox
+                android:text="@string/search_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkBoxName"
+                android:layout_weight="1"
+                android:onClick="onClickChk"
+                android:checked="true" />
+
+            <CheckBox
+                android:text="@string/search_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkBoxDescription"
+                android:layout_weight="1"
+                android:onClick="onClickChk"
+                android:checked="true" />
+
+            <CheckBox
+                android:text="@string/search_tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkBoxTags"
+                android:layout_weight="1"
+                android:onClick="onClickChk"
+                android:checked="true" />
+
+            <CheckBox
+                android:text="@string/data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkBoxData"
+                android:layout_weight="1"
+                android:onClick="onClickChk"
+                android:checked="true" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:text="@string/select_all_filters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAll"
+        android:layout_weight="0"
+        android:onClick="onClickBtnAll" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewTitle"
+        android:layout_weight="0"
+        android:textSize="24sp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/listViewChannels"
+        android:layout_weight="1" />
+
+    <TextView
+        android:text="  "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtErrorLog"
+        android:layout_weight="0" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="0">
+
+        <ImageButton
+            android:src="@drawable/ic_button_first_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnFirstPage"
+            android:layout_weight="1"
+            android:onClick="onClickBtnFirstPage" />
+
+        <ImageButton
+            android:src="@drawable/ic_button_back_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPreviousPage"
+            android:layout_weight="1"
+            android:onClick="onClickBtnPreviousPage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="0"
+            android:id="@+id/pageTextView"
+            android:gravity="center"
+            android:fontFamily="sans-serif"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:src="@drawable/ic_button_next_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnNextPage"
+            android:layout_weight="1"
+            android:onClick="onClickBtnNextPage" />
+
+        <ImageButton
+            android:src="@drawable/ic_button_last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnLastPage"
+            android:layout_weight="1"
+            android:onClick="onClickBtnLastPage" />
+
+    </LinearLayout>
+
+</LinearLayout>
